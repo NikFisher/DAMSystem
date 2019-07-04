@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainScreenController">
+   <children>
+      <ScrollPane layoutY="111.0" prefHeight="324.0" prefWidth="638.0">
+         <content>
+            <VBox prefHeight="327.0" prefWidth="588.0">
+               <children>
+                  <AnchorPane prefHeight="65.0" prefWidth="438.0">
+                     <children>
+                        <ImageView fx:id="main_screen_hammer" fitHeight="58.0" fitWidth="92.0" layoutX="95.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@hammer.jpg" />
+                           </image></ImageView>
+                        <Text layoutX="257.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hammer.jpg" />
+                        <MenuButton fx:id="hammer_menu_button" layoutX="408.0" layoutY="19.0" mnemonicParsing="false" text="Option">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#viewHammerClicked" text="View" />
+                              <MenuItem mnemonicParsing="false" onAction="#tagHammerClicked" text="Tag" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="378.0">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="92.0" layoutX="93.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@screwdriver.jpg" />
+                           </image></ImageView>
+                        <Text layoutX="256.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="screwdriver.jpg" />
+                        <MenuButton fx:id="screwdriver_menu_btn" layoutX="406.0" layoutY="23.0" mnemonicParsing="false" text="Option">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#viewScrewDriverClicked" text="View" />
+                              <MenuItem mnemonicParsing="false" onAction="#tagScrewDriverClicked" text="Tag" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="378.0">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="92.0" layoutX="97.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@wrench.jpg" />
+                           </image></ImageView>
+                        <Text layoutX="260.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wrench.jpg" />
+                        <MenuButton fx:id="wrench_menu_btn" layoutX="405.0" layoutY="20.0" mnemonicParsing="false" text="Option">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#viewWrenchClicked" text="View" />
+                              <MenuItem mnemonicParsing="false" onAction="#tagWrenchClicked" text="Tag" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="378.0">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="92.0" layoutX="98.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@saw.jpg" />
+                           </image></ImageView>
+                        <Text layoutX="259.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="saw.jpg" />
+                        <MenuButton fx:id="saw_menu_btn" layoutX="404.0" layoutY="20.0" mnemonicParsing="false" text="Option">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#viewSawClicked" text="View" />
+                              <MenuItem mnemonicParsing="false" onAction="#tagSawClicked" text="Tag" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="378.0">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="92.0" layoutX="92.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@hammering_nail.jpg" />
+                           </image></ImageView>
+                        <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hammering_nail.jpg" />
+                        <MenuButton fx:id="hammering_nail_menu_btn" layoutX="404.0" layoutY="20.0" mnemonicParsing="false" text="Option">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#viewHammeringNailClicked" text="View" />
+                            <MenuItem mnemonicParsing="false" onAction="#tagHammeringNailClicked" text="Tag" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <SplitMenuButton layoutX="29.0" layoutY="70.0" mnemonicParsing="false" text="File Type">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+      <SplitMenuButton layoutX="200.0" layoutY="70.0" mnemonicParsing="false" text="Material Type">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+      <SplitMenuButton layoutX="416.0" layoutY="70.0" mnemonicParsing="false" text="Product">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+      <Text layoutX="29.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by:" />
+      <Button fx:id="uploadBtn" layoutX="29.0" layoutY="454.0" mnemonicParsing="false" onAction="#uploadClicked" text="Upload" />
+   </children>
+</Pane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="342.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.setFileTypeScreenController">
+   <children>
+      <SplitMenuButton fx:id="select_file_type_btn" layoutX="171.0" layoutY="151.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="179.0" text="Select file type">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#imageSelected" text="Image" />
+          <MenuItem mnemonicParsing="false" onAction="#documentSelected" text="Document" />
+            <MenuItem mnemonicParsing="false" onAction="#videoSelected" text="Video" />
+        </items>
+      </SplitMenuButton>
+      <Button fx:id="set_file_next_btn" layoutX="427.0" layoutY="285.0" mnemonicParsing="false" onAction="#nextClicked" text="Next" />
+      <Button fx:id="set_file_back_btn" layoutX="32.0" layoutY="26.0" mnemonicParsing="false" onAction="#backBtnClicked" text="Back" />
+   </children>
+</AnchorPane>

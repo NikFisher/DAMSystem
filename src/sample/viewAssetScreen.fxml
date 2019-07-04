@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewAssetScreenController">
+   <children>
+      <ImageView fx:id="image" fitHeight="287.0" fitWidth="408.0" layoutX="89.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="backBtn" layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#backBtnClicked" text="Back" />
+      <Text fx:id="assetName" layoutX="95.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

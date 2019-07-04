@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="539.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TagImageScreenController">
+   <children>
+      <ImageView fx:id="picture" fitHeight="235.0" fitWidth="253.0" layoutX="22.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+      <MenuButton fx:id="typeBtn" layoutX="300.0" layoutY="22.0" mnemonicParsing="false" text="Type:">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#productClicked" text="Product" />
+          <MenuItem mnemonicParsing="false" onAction="#illustrationClicked" text="Illustration" />
+            <MenuItem mnemonicParsing="false" onAction="#usageClicked" text="Usage" />
+            <MenuItem mnemonicParsing="false" onAction="#packagingClicked" text="Packaging" />
+            <MenuItem mnemonicParsing="false" onAction="#logoClicked" text="Logo" />
+            <MenuItem mnemonicParsing="false" onAction="#noneClicked" text="&lt;None&gt;" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="productBtn" layoutX="300.0" layoutY="110.0" mnemonicParsing="false" text="Product(s)">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#hammerClicked" text="Hammer" />
+          <MenuItem mnemonicParsing="false" onAction="#screwDriverClicked" text="Screw Driver" />
+            <MenuItem mnemonicParsing="false" onAction="#wrenchClicked" text="Wrench" />
+            <MenuItem mnemonicParsing="false" onAction="#drillClicked" text="Drill" />
+            <MenuItem mnemonicParsing="false" onAction="#pliersClicked" text="Pliers " />
+            <MenuItem mnemonicParsing="false" onAction="#sawClicked" text="Saw" />
+        </items>
+      </MenuButton>
+      <Text layoutX="309.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="298.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
+      <TextArea fx:id="descriptionBox" layoutX="302.0" layoutY="338.0" prefHeight="105.0" prefWidth="215.0" />
+      <Text layoutX="298.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Product Image:" />
+      <CheckBox fx:id="mpiCheckBox" layoutX="433.0" layoutY="75.0" mnemonicParsing="false" onAction="#mpiChecked" />
+      <Button fx:id="changeFileTypeBtn" layoutX="52.0" layoutY="453.0" mnemonicParsing="false" onAction="#changeFileTypeBtnClicked" text="Change file type" />
+      <Button fx:id="saveBtn" layoutX="569.0" layoutY="453.0" mnemonicParsing="false" onAction="#saveBtnClicked" text="Save" />
+      <Text fx:id="type" layoutX="385.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="96.0" />
+      <Button fx:id="removeProductBtn" layoutX="457.0" layoutY="284.0" mnemonicParsing="false" onAction="#removeProductBtnClicked" text="Remove" />
+      <ListView fx:id="productList" layoutX="296.0" layoutY="152.0" prefHeight="111.0" prefWidth="226.0" />
+      <Text fx:id="assetName" layoutX="59.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+   </children>
+</AnchorPane>
