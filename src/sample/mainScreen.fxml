@@ -8,15 +8,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainScreenController">
+<AnchorPane prefHeight="463.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainScreenController">
    <children>
-      <ListView fx:id="assetList" layoutX="30.0" layoutY="135.0" prefHeight="214.0" prefWidth="570.0" />
-      <Button fx:id="uploadBtn" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" onAction="#uploadClicked" text="Upload" />
+      <ListView fx:id="assetList" layoutX="30.0" layoutY="135.0" prefHeight="237.0" prefWidth="570.0" />
+      <Button fx:id="uploadBtn" layoutX="23.0" layoutY="386.0" mnemonicParsing="false" onAction="#uploadClicked" text="Upload" />
       <Text layoutX="139.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fisher: Digital Asset Management System">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="deleteBtn" layoutX="551.0" layoutY="359.0" mnemonicParsing="false" onAction="#deleteBtnClicked" text="Delete" />
+      <Button fx:id="deleteBtn" layoutX="551.0" layoutY="386.0" mnemonicParsing="false" onAction="#deleteBtnClicked" text="Delete" />
    </children>
 </AnchorPane>
