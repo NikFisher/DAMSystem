@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ContextMenuEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
@@ -59,7 +60,7 @@ public class MainScreenController implements Initializable{
         ImageView imgView = new ImageView(img);
         Text text = new Text(name);
         dam.uploadAsset2(asset);
-        imgView.setFitWidth(50);
+        imgView.setFitWidth(70);
         imgView.setFitHeight(50);
         MenuButton mb = new MenuButton();
         ContextMenu contextMenu = new ContextMenu();
