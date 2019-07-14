@@ -1,6 +1,7 @@
 package sample;
 
 import backend.ImageAsset;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -24,6 +26,7 @@ import javafx.stage.FileChooser;
 import backend.DAMController;
 import backend.Asset;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.File;
 import java.net.URL;
@@ -32,12 +35,16 @@ import java.util.ResourceBundle;
 public class MainScreenController implements Initializable{
 
     DAMController dam = new DAMController();
+    int selectionIndex = -1;
 
     @FXML
     private Button uploadBtn;
 
     @FXML
     private ListView assetList;
+
+    @FXML
+    private Button deleteBtn;
 
     @FXML
     void uploadClicked(ActionEvent event) {
@@ -58,12 +65,11 @@ public class MainScreenController implements Initializable{
         String name = string;
         Asset asset = new Asset(img,name);
         ImageView imgView = new ImageView(img);
-        Text text = new Text(name);
+        Label text = new Label(name);
         dam.uploadAsset2(asset);
         imgView.setFitWidth(70);
         imgView.setFitHeight(50);
         MenuButton mb = new MenuButton();
-        ContextMenu contextMenu = new ContextMenu();
         mb.setText("Select option");
         MenuItem view = new MenuItem();
         view.setText("View");
@@ -83,13 +89,13 @@ public class MainScreenController implements Initializable{
             }
         });
         mb.getItems().addAll(view,tag);
+
         Pane pane1 = new Pane();
         pane1.setPrefSize(100,50);
         Pane pane2 = new Pane();
         pane2.setPrefSize(100,50);
-        HBox hbox = new HBox(imgView,pane1, text,pane2,mb);
+        HBox hbox = new HBox(imgView,pane1, text,pane2, mb);
         assetList.getItems().add(hbox);
-
 
     }
 
@@ -147,6 +153,15 @@ public class MainScreenController implements Initializable{
             setFileTypeScreenController setFileType = loader.getController();
             setFileType.setAsset(asset);
             setFileType.setDam(dam);
+        }
+    }
+
+    @FXML
+    void deleteBtnClicked(ActionEvent event) {
+        selectionIndex = assetList.getSelectionModel().getSelectedIndex();
+        if(selectionIndex>-1){
+            assetList.getItems().remove(selectionIndex);
+            dam.assetList.remove(selectionIndex);
         }
     }
 
