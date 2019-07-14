@@ -37,9 +37,6 @@ public class MainScreenController implements Initializable{
     private Button uploadBtn;
 
     @FXML
-    private ImageView imageView;
-
-    @FXML
     private ListView assetList;
 
     @FXML
