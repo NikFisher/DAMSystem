@@ -8,12 +8,13 @@ import java.util.ArrayList;
 
 public class Asset {
     private String name;
-    private String type = "";
+    private String type;
     private ArrayList <String> products;
     private String description;
     private Image img;
 
     public Asset(Image img, String name){
+        this.type = "";
         this.description = "";
         this.products = new ArrayList<>();
         this.img = img;

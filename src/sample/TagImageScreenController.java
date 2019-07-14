@@ -207,6 +207,7 @@ public class TagImageScreenController implements Initializable {
         this.imageAsset = imageAsset;
         this.dam = dam;
         picture.setImage(this.imageAsset.getImg());
+        assetType = imageAsset.getType();
         if(imageAsset.getType()==""){
             typeBtn.setText("Type:");
         }else {
