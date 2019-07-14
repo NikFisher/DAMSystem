@@ -31,7 +31,6 @@ import java.util.ResourceBundle;
 public class MainScreenController implements Initializable{
 
     DAMController dam = new DAMController();
-    ObservableList <String> listView = FXCollections.observableArrayList();
 
     @FXML
     private Button uploadBtn;
@@ -63,6 +62,7 @@ public class MainScreenController implements Initializable{
         imgView.setFitWidth(50);
         imgView.setFitHeight(50);
         MenuButton mb = new MenuButton();
+        ContextMenu contextMenu = new ContextMenu();
         mb.setText("Select option");
         MenuItem view = new MenuItem();
         view.setText("View");
@@ -87,14 +87,9 @@ public class MainScreenController implements Initializable{
         Pane pane2 = new Pane();
         pane2.setPrefSize(100,50);
         HBox hbox = new HBox(imgView,pane1, text,pane2,mb);
-
         assetList.getItems().add(hbox);
-        ContextMenu contextMenu = new ContextMenu();
-        MenuItem view2 = new MenuItem();
-        contextMenu.getItems().addAll(view,tag);
-        //assetList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        //contextMenu.getAnchorLocation().equals(assetList);
-        assetList.setContextMenu(contextMenu);
+
+
     }
 
     public void openViewAssetPage(Image pic, String name){
