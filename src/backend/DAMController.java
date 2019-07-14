@@ -16,6 +16,10 @@ public class DAMController {
         Asset newAsset = new Asset(img, name);
         assetList.add(newAsset);
     }
+
+    public void uploadAsset2(Asset asset){
+        assetList.add(asset);
+    }
     public Asset findAsset(String name){
         for(int i =0; i<assetList.size();i++){
             Asset currentAsset = assetList.get(i);
