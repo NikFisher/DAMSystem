@@ -18,7 +18,6 @@ A system like this would be connected to an external system such as a company we
 The marketing team would use the DAMsystem to upload and tag the material they create so that it can be uploaded to the company
 website to be used by other employees for various purposes.  
 
-So far, the system can only tag images and cannot upload new assets.  The system has not been connected to a database so the 
-changes made aren't saved once the program is closed.
+So far, the user can upload images to the system.  However, the system can only tag images.  The system has also not been connected to a database so the assets are lost once it stops running.  
 
-My next steps are to enable the uploading of new files as well as connect the system to a database.  
+My next steps are to create a database that stores the assets and connect the system to the database.  
